@@ -31,26 +31,26 @@
 ```python 
     df = df.drop_duplicates()
 ```
-        - This removed all the duplicated columns in the dataset so that it doesn't skew the results.
+- This removed all the duplicated columns in the dataset so that it doesn't skew the results.
 
 - 3. Removing gender entry of "3"
 ```python
     df = df[df['gender'] != 3]  
 ```
-        - This takes out the "3" category for gender since there aren't 3 categories for gender so taking it out will give out better results. 
+- This takes out the "3" category for gender since there aren't 3 categories for gender so taking it out will give out better results. 
 
 - 4. Removing rows with years later than 2023 and making year an integer 
 ```python
     df = df[df['year'] <= 2023]
     df['year'] = df['year'].astype(int)
 ```
-        - This helps keep the data more accurate since its impossible to have data in the future
+- This helps keep the data more accurate since its impossible to have data in the future
 
 - 5. Removing _typo from the income_groups column 
 ```python
     df['income_groups'] = df['income_groups'].str.replace('_typo', '')
 ```
-        - This takes out any of the typos in the column so there are more clear columns that are better named. 
+ - This takes out any of the typos in the column so there are more clear columns that are better named. 
 - 6. Removing rows where the population is 1.5 times the IQR less than Q1 or 1.5 times the IQR greater than Q3
 ```python 
     Q1 = df['population'].quantile(0.25)
@@ -58,7 +58,7 @@
     IQR = Q3 - Q1
     df = df[(df['population'] > (Q1 - 1.5 * IQR)) & (df['population'] < (Q3 + 1.5 * IQR))] 
 ```
-        - This makes population column more understandable and realistic to understand the data. I still think that it could be better. 
+- This makes population column more understandable and realistic to understand the data. I still think that it could be better. 
 
 # Final Data Overview: 
 - Dataset: cleaned_population_data.csv
