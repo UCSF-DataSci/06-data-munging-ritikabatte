@@ -2,13 +2,14 @@
 - Dataset: messy_population_data.csv
 - Total Rows: 125718
 - Total Columns: 5
-|     Column       | Non-Null | Count    | Dtype   |
-|------------------|----------|----------|---------|    
-|0|  income_groups | 119412   | non-null | object  |
-|1|  age           | 119495   | non-null | float64 |
-|2|  gender        | 119811   | non-null | float64 |
-|3|  year          | 119516   | non-null | float64 |
-|4|  population    | 119378   | non-null | float64 |
+  
+| Column        | Non-Null Count | Count    | Dtype   |
+|---------------|----------------|--------- |---------|
+| income_groups | 119412         | non-null | object  |
+| age           | 119495         | non-null | float64 |
+| gender        | 119811         | non-null | float64 |
+| year          | 119516         | non-null | float64 |
+| population    | 119378         | non-null | float64 |
 
 # Part 1: Identifying Data Issues: 
 - Columns affected: income_groups (categorical), gender (categorical), age (numeric), year (categorical), population (numeric)
@@ -65,13 +66,14 @@
 - Dataset: cleaned_population_data.csv
 - Total Rows: 39757
 - Total Columns: 5
-|     Column       | Non-Null | Count    | Dtype   |
-|------------------|----------|----------|---------|
-|0|  income_groups | 39757    | non-null | object  |
-|1|  age           | 39757    | non-null | float64 |
-|2|  gender        | 39757    | non-null | float64 |
-|3|  year          | 39757    | non-null | int64   |
-|4|  population    | 39757    | non-null | float64 |
+  
+| Column        | Non-Null | Count    | Dtype   |
+|---------------|----------|----------|---------|
+| income_groups | 39757    | non-null | object  |
+| age           | 39757    | non-null | float64 |
+| gender        | 39757    | non-null | float64 |
+| year          | 39757    | non-null | int64   |
+| population    | 39757    | non-null | float64 |
 
 - The cleaned dataset addresses key issues from the messy dataset by handling missing values, removing duplicated rows, and removing false entries like in gender, year, and income_groups. 
 - One of the challeneges was the population entries because I wasn't sure how to handle the incorrect data entries since I don't know much about the dataset.
